@@ -193,3 +193,35 @@ span.attribute {
 span.value {
     color: #2288AA; /* Blue for attribute values */
 }
+/* Responsive styles for screen width 600px or less */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    /* Example: Stack elements vertically if they're side by side on desktop */
+    .some-class-that-floats-or-displays-side-by-side {
+        float: none;
+        width: 100%;
+    }
+
+    /* Adjustments to headings for smaller screens */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.item {
+    width: 50%; /* Two items per row by default */
+}
+
+/* On smaller screens, make each item take full width */
+@media only screen and (max-width: 600px) {
+    .item {
+        width: 100%;
+    }
+}
